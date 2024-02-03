@@ -1,0 +1,14 @@
+1706926757246	geckodriver	INFO	Listening on 127.0.0.1:53239
+1706926757262	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/_m/w40mhjk923557b8g4fbngl5h0000gn/T/rust_mozprofileC12I1G"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1706926757644	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1706926758098	Marionette	INFO	Listening on port 53258
+Read port: 53258
+WebDriver BiDi listening on ws://127.0.0.1:53240
+1706926758455	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:53240/devtools/browser/60794a70-728a-4c62-af20-1d13b5d8028b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ertc-spot.vercel.app."
+1706926773230	Marionette	INFO	Stopped listening on port 53258

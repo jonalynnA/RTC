@@ -1,62 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.9.6 on darwin)" generated="2024-02-02T17:46:25.883275" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.9.6 on darwin)" generated="2024-02-02T18:20:01.620979" rpa="false" schemaversion="5">
 <suite id="s1" name="RTC" source="/Users/jonalynnmasters/Desktop/RTC/Tests/RTC.robot">
-<test id="s1-t1" name="RTC Landing Page" line="15">
+<test id="s1-t1" name="Sign In" line="22">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-02T17:46:26.006090" level="INFO">Opening browser 'firefox' to base url 'https://ertc-spot.vercel.app/ chrome'.</msg>
+<msg time="2024-02-02T18:20:01.750187" level="INFO">Opening browser 'firefox' to base url 'https://ertc-spot.vercel.app/ chrome'.</msg>
 <arg>${start_url} ${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-02T17:46:26.005878" elapsed="2.668940"/>
+<status status="PASS" start="2024-02-02T18:20:01.749984" elapsed="2.745478"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-02T17:46:28.675409" elapsed="0.471493"/>
+<status status="PASS" start="2024-02-02T18:20:04.496019" elapsed="0.460950"/>
 </kw>
-<status status="PASS" start="2024-02-02T17:46:26.005196" elapsed="3.141855"/>
+<status status="PASS" start="2024-02-02T18:20:01.749274" elapsed="3.207843"/>
 </kw>
 <kw name="Load" owner="RTC_LandingPage">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-02-02T17:46:29.147770" level="INFO">Opening url 'https://ertc-spot.vercel.app/'</msg>
+<msg time="2024-02-02T18:20:04.957926" level="INFO">Opening url 'https://ertc-spot.vercel.app/'</msg>
 <arg>${START_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-02-02T17:46:29.147616" elapsed="0.201798"/>
+<status status="PASS" start="2024-02-02T18:20:04.957667" elapsed="0.194186"/>
 </kw>
-<status status="PASS" start="2024-02-02T17:46:29.147343" elapsed="0.202199"/>
+<status status="PASS" start="2024-02-02T18:20:04.957381" elapsed="0.194594"/>
 </kw>
 <kw name="Verify RTC Sign In Page Loaded" owner="RTC_LandingPage">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Sign In</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-02T17:46:29.350160" elapsed="0.009821"/>
+<status status="PASS" start="2024-02-02T18:20:05.152457" elapsed="0.012899"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-02-02T17:46:29.365862" level="INFO">Current page contains text 'Email'.</msg>
+<msg time="2024-02-02T18:20:05.179852" level="INFO">Current page contains text 'Email'.</msg>
 <arg>Email</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-02-02T17:46:29.360168" elapsed="0.005811"/>
+<status status="PASS" start="2024-02-02T18:20:05.165550" elapsed="0.014400"/>
 </kw>
-<status status="PASS" start="2024-02-02T17:46:29.349812" elapsed="0.016286"/>
+<status status="PASS" start="2024-02-02T18:20:05.152182" elapsed="0.027878"/>
+</kw>
+<kw name="Sign In" owner="RTC_LandingPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-02T18:20:05.181067" level="INFO">Clicking element 'xpath=//input[@value='']'.</msg>
+<arg>${ENTER_EMAIL_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T18:20:05.180602" elapsed="0.253051"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-02T18:20:05.434348" level="INFO">Typing text 'umardev.works@gmail.com' into text field 'xpath=//input[@value='']'.</msg>
+<arg>${ENTER_EMAIL_FIELD}</arg>
+<arg>${TEST_USER_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T18:20:05.433957" elapsed="0.033349"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-02T18:20:05.467726" level="INFO">Clicking element 'xpath=//div[3]/input'.</msg>
+<arg>${ENTER_PASSWORD_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T18:20:05.467499" elapsed="0.211444"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-02T18:20:05.679887" level="INFO">Typing text 'B1880120@' into text field 'xpath=//div[3]/input'.</msg>
+<arg>${ENTER_PASSWORD_FIELD}</arg>
+<arg>${TEST_USER_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T18:20:05.679341" elapsed="0.020482"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-02T18:20:05.700442" level="INFO">Clicking element 'xpath=//*/text()[normalize-space(.)='Sign In']/parent::*'.</msg>
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T18:20:05.700109" elapsed="0.212611"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-02T18:20:10.913672" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-02T18:20:05.913058" elapsed="5.000726"/>
+</kw>
+<status status="PASS" start="2024-02-02T18:20:05.180301" elapsed="5.733592"/>
 </kw>
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-02T17:46:29.366677" elapsed="0.629209"/>
+<status status="PASS" start="2024-02-02T18:20:10.914430" elapsed="0.731557"/>
 </kw>
-<status status="PASS" start="2024-02-02T17:46:29.366391" elapsed="0.629624"/>
+<status status="PASS" start="2024-02-02T18:20:10.914163" elapsed="0.732074"/>
 </kw>
-<doc>Landing Page</doc>
-<tag>RTC</tag>
-<status status="PASS" start="2024-02-02T17:46:26.004728" elapsed="3.991344"/>
+<doc>Sign In</doc>
+<tag>RTC2</tag>
+<status status="PASS" start="2024-02-02T18:20:01.748835" elapsed="9.897484"/>
 </test>
-<status status="PASS" start="2024-02-02T17:46:25.884378" elapsed="4.112181"/>
+<status status="PASS" start="2024-02-02T18:20:01.622118" elapsed="10.025001"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">RTC</stat>
+<stat pass="1" fail="0" skip="0">RTC2</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="RTC">RTC</stat>
