@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.6 on darwin)" generated="2024-02-02T17:46:25.883275" rpa="false" schemaversion="5">
+<suite id="s1" name="RTC" source="/Users/jonalynnmasters/Desktop/RTC/Tests/RTC.robot">
+<test id="s1-t1" name="RTC Landing Page" line="15">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:46:26.006090" level="INFO">Opening browser 'firefox' to base url 'https://ertc-spot.vercel.app/ chrome'.</msg>
+<arg>${start_url} ${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-02T17:46:26.005878" elapsed="2.668940"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-02T17:46:28.675409" elapsed="0.471493"/>
+</kw>
+<status status="PASS" start="2024-02-02T17:46:26.005196" elapsed="3.141855"/>
+</kw>
+<kw name="Load" owner="RTC_LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:46:29.147770" level="INFO">Opening url 'https://ertc-spot.vercel.app/'</msg>
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-02T17:46:29.147616" elapsed="0.201798"/>
+</kw>
+<status status="PASS" start="2024-02-02T17:46:29.147343" elapsed="0.202199"/>
+</kw>
+<kw name="Verify RTC Sign In Page Loaded" owner="RTC_LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Sign In</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-02T17:46:29.350160" elapsed="0.009821"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:46:29.365862" level="INFO">Current page contains text 'Email'.</msg>
+<arg>Email</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-02-02T17:46:29.360168" elapsed="0.005811"/>
+</kw>
+<status status="PASS" start="2024-02-02T17:46:29.349812" elapsed="0.016286"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-02T17:46:29.366677" elapsed="0.629209"/>
+</kw>
+<status status="PASS" start="2024-02-02T17:46:29.366391" elapsed="0.629624"/>
+</kw>
+<doc>Landing Page</doc>
+<tag>RTC</tag>
+<status status="PASS" start="2024-02-02T17:46:26.004728" elapsed="3.991344"/>
+</test>
+<status status="PASS" start="2024-02-02T17:46:25.884378" elapsed="4.112181"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">RTC</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RTC">RTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
